@@ -3,6 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	name := "Go Developers"
-	fmt.Println("Azure for", name)
+	sum := 1
+	for sum < 10 {
+		sum += sum
+	}
+	fmt.Println(sum)
 }
