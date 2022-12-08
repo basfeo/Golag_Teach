@@ -1,12 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
-	sum := 1
-	for sum < 10 {
-		fmt.Println(sum)
-		sum += sum
+	t := time.Now()
+	println(t.String())
+	switch {
+	case t.Hour() < 12:
+		fmt.Println("Good morning!")
+	case t.Hour() < 17:
+		fmt.Println("Good afternoon.")
+	default:
+		fmt.Println("Good evening.")
 	}
-	fmt.Println(sum)
 }
