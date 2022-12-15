@@ -2,15 +2,18 @@ package main
 
 import "fmt"
 
-type Vertex struct {
-	Lat, Long float64
-}
-
-var m = map[string]Vertex{
-	"Bell Labs": {40.68433, -74.39967},
-	"Google":    {37.42202, -122.08408},
-}
-
 func main() {
-	fmt.Println(m)
+	var i int
+	fmt.Scan(&i)
+	f := i % 100
+	s := i % 100
+	t := i % 10
+	if f == s {
+		fmt.Println("NO")
+	} else if s == t {
+		fmt.Println("NO")
+	} else if f == t {
+		fmt.Println("NO")
+	}
+	fmt.Println("YES")
 }
